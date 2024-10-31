@@ -9,6 +9,8 @@ const path = require('path');
 const hbs = require('hbs');
 dotenv.config();
 const app = express();
+var cors= require('cors');
+app.use(cors());
 
 const PORT = process.env.PORT || 3000;
 
@@ -34,3 +36,4 @@ app.use("/", weatherRoutes)
 app.listen(PORT, () => {
     console.log(`Server Running on PORT : ${PORT}`);
 });
+
